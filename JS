@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+	<title> Example 01 </title>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="Main.css"/>
+</head>
+<body>
+		<p id="display"></p>
+
+		<p id="result"></p>
+<table>
+        <tr>
+            <th><button onClick='displayNum("+")'> + </button></th>
+            <th><button onClick='displayNum("-")'> - </button></th>
+            <th><button onClick='displayResult()'> = </button></th>
+		</tr>
+			<tr>
+				<td><button onClick="displayNum(1)"> 1 </button></td>
+				<td><button onClick="displayNum(2)"> 2 </button></td>
+				<td><button onClick="displayNum(3)"> 3 </button></td>
+			</tr>
+				<td><button onClick="displayNum(4)"> 4 </button></td>
+				<td><button onClick="displayNum(5)"> 5 </button></td>
+				<td><button onClick="displayNum(6)"> 6 </button></td>
+				</tr>
+				<td><button onClick="displayNum(7)"> 7 </button></td>
+				<td><button onClick="displayNum(8)"> 8 </button></td>
+				<td><button onClick="displayNum(9)"> 9 </button></td>
+
+			</body>
+<script>
+	function displayNum(x){
+		console.log(x);
+		document.getElementById("display").innerHTML += x;
+	}
+	
+	function displayResult(){
+		//get text
+		var text_to_eva = document.getElementById("display").innerHTML;
+		//evalute text
+		document.getElementById("result").innerHTML = eval(text_to_eva);
+	}
+</script>
+</html>
